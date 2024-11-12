@@ -1,5 +1,7 @@
-# waveprinciple
-Principia Sutherland The New Laws of Motion and Energy
+# Sutherland Wave Principle
+
+The New Laws of Motion and Energy
+This is the next great leap in understanding that takes us beyond Newton and Einstein
 
 The Worlds First 7:7 Ratio Wave Principle Pattern Catalogue
 & Market Price Pattern Catalogue
@@ -21,9 +23,11 @@ This is The Worlds Only Accurate 7:7 Ratio Price Pattern Catalogue Published Onl
 The world is not ready to learn and accept what is moving the markets. --- W.D. Gann
  
 Sutherland's Quantum Wave Principle
-Get It Now
+
+Get It Now Copy Link To your Browser Address Bar
+
 https://www.lulu.com/shop/renee-hoadley-and-paul-sutherland/sutherland-quantum-wave-principle/hardcover/product-k4gvjk.html
-https://waveprinciple.org
+
 
 Details
 Publication Date
