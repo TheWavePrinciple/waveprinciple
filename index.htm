@@ -3,11 +3,117 @@
     <title>Sutherland Wave Principle</title>
     <head>
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld8Kr8qAAAAAHLxbhwYGWPlcHNLV32a3JihVuCj"></script>
-    </head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <style>
+        /* Chatbox container styles */
+        .chatbox-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+        }
+
+        .chatbox-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .chatbox-header span {
+            font-weight: bold;
+        }
+
+        .chatbox-header button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .chatbox-body {
+            display: none; /* Hidden initially */
+            background-color: #f9f9f9;
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        .chatbox-footer {
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+
+        .chatbox-footer input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        /* Minimized chatbox */
+        .minimized {
+            height: auto;
+            overflow: hidden;
+        }
+
+    </style>
 <meta name="description" content="Seventh Wave Principle is a set of empirically derived rules for interpreting patterns in the financial markets.  It&#039;s a rational system of re occurring patterns and descriptions of their structures. Seventh Wave Principle is a guide to how these structures link together to form the same patterns of the next larger scale and so on. This is the ultimate cutting edge catalogue of price patterns." />
 <meta name="keywords" content="Seventh Wave Principle, 7th wave principle, Sutherland wave principle,SCIENCE OF TRADING, forex, Elliott wave principle, wave principle, Fibonacci retrace, 61.8" />
   </head>
   <body bgcolor="#D3D3D3">
+    <div class="chatbox-container" id="chatbox">
+    <div class="chatbox-header" id="chatbox-header">
+        <span>Chat with Us</span>
+        <div>
+            <button id="minimize-btn">_</button>
+            <button id="close-btn">&times;</button>
+        </div>
+    </div>
+    <div class="chatbox-body" id="chatbox-body">
+        <p>Welcome! How can we help you today?</p>
+    </div>
+    <div class="chatbox-footer" id="chatbox-footer">
+        <input type="text" placeholder="Type your message...">
+    </div>
+</div>
+
+<script>
+    // Select elements
+    const chatbox = document.getElementById('chatbox');
+    const chatboxHeader = document.getElementById('chatbox-header');
+    const chatboxBody = document.getElementById('chatbox-body');
+    const minimizeBtn = document.getElementById('minimize-btn');
+    const closeBtn = document.getElementById('close-btn');
+
+    // Toggle minimize functionality
+    minimizeBtn.addEventListener('click', () => {
+        chatboxBody.style.display = chatboxBody.style.display === 'none' ? 'block' : 'none';
+        chatbox.classList.toggle('minimized');
+    });
+
+    // Close chatbox
+    closeBtn.addEventListener('click', () => {
+        chatbox.style.display = 'none';
+    });
+
+    // Keep chatbox visible on scroll
+    window.addEventListener('scroll', () => {
+        const offsetY = window.pageYOffset;
+        chatbox.style.bottom = `${20 + offsetY}px`;
+    });
+</script>
 <div id="sys_background"><header>
 <table style="width: 80%; margin-left: auto; margin-right: auto;">
 <tbody>
