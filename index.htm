@@ -3,116 +3,139 @@
     <title>Sutherland Wave Principle</title>
     <head>
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld8Kr8qAAAAAHLxbhwYGWPlcHNLV32a3JihVuCj"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Box</title>
-    <style>
-        /* Chatbox container styles */
-        .chatbox-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-            z-index: 1000;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Chat Widget</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        .chatbox-header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
+    #floating-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background-color: #f4f4f4;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      cursor: grab;
+      overflow: hidden;
+    }
 
-        .chatbox-header span {
-            font-weight: bold;
-        }
+    #widget-header {
+      background-color: #0078d7;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: grab;
+    }
 
-        .chatbox-header button {
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
+    #widget-header .actions {
+      display: flex;
+      gap: 10px;
+    }
 
-        .chatbox-body {
-            display: none; /* Hidden initially */
-            background-color: #f9f9f9;
-            height: 300px;
-            overflow-y: auto;
-        }
+    #widget-header button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
 
-        .chatbox-footer {
-            padding: 10px;
-            background-color: #f1f1f1;
-        }
+    #widget-body {
+      padding: 10px;
+      height: calc(100% - 50px);
+    }
 
-        .chatbox-footer input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            outline: none;
-        }
-
-        /* Minimized chatbox */
-        .minimized {
-            height: auto;
-            overflow: hidden;
-        }
-
-    </style>
+    .hidden {
+      display: none;
+    }
+  </style>
 <meta name="description" content="Seventh Wave Principle is a set of empirically derived rules for interpreting patterns in the financial markets.  It&#039;s a rational system of re occurring patterns and descriptions of their structures. Seventh Wave Principle is a guide to how these structures link together to form the same patterns of the next larger scale and so on. This is the ultimate cutting edge catalogue of price patterns." />
 <meta name="keywords" content="Seventh Wave Principle, 7th wave principle, Sutherland wave principle,SCIENCE OF TRADING, forex, Elliott wave principle, wave principle, Fibonacci retrace, 61.8" />
   </head>
   <body bgcolor="#D3D3D3">
-    <div class="chatbox-container" id="chatbox">
-    <div class="chatbox-header" id="chatbox-header">
-        <span>Chat with Us</span>
-        <div>
-            <button id="minimize-btn">_</button>
-            <button id="close-btn">&times;</button>
-        </div>
+  <div id="floating-widget">
+  <div id="widget-header">
+    Chat Widget
+    <div class="actions">
+      <button id="minimize">-</button>
+      <button id="close">x</button>
     </div>
-    <div class="chatbox-body" id="chatbox-body">
-        <p>Welcome! How can we help you today?</p>
-    </div>
-    <div class="chatbox-footer" id="chatbox-footer">
-        <input type="text" placeholder="Type your message...">
-    </div>
+  </div>
+  <div id="widget-body">
+   <!-- Brevo Conversations {literal} -->
+<script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '678e69b216ee280f7a013c52';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+</script>
+<!-- /Brevo Conversations {/literal} -->
+    <p>Insert your chat script between these comments.</p>
+  </div>
 </div>
 
 <script>
-    // Select elements
-    const chatbox = document.getElementById('chatbox');
-    const chatboxHeader = document.getElementById('chatbox-header');
-    const chatboxBody = document.getElementById('chatbox-body');
-    const minimizeBtn = document.getElementById('minimize-btn');
-    const closeBtn = document.getElementById('close-btn');
+  const widget = document.getElementById('floating-widget');
+  const header = document.getElementById('widget-header');
+  const body = document.getElementById('widget-body');
+  const minimizeBtn = document.getElementById('minimize');
+  const closeBtn = document.getElementById('close');
 
-    // Toggle minimize functionality
-    minimizeBtn.addEventListener('click', () => {
-        chatboxBody.style.display = chatboxBody.style.display === 'none' ? 'block' : 'none';
-        chatbox.classList.toggle('minimized');
-    });
+  // Dragging functionality
+  let offsetX = 0, offsetY = 0, isDragging = false;
 
-    // Close chatbox
-    closeBtn.addEventListener('click', () => {
-        chatbox.style.display = 'none';
-    });
+  header.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - widget.offsetLeft;
+    offsetY = e.clientY - widget.offsetTop;
+    header.style.cursor = 'grabbing';
+  });
 
-    // Keep chatbox visible on scroll
-    window.addEventListener('scroll', () => {
-        const offsetY = window.pageYOffset;
-        chatbox.style.bottom = `${20 + offsetY}px`;
-    });
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      widget.style.left = `${e.clientX - offsetX}px`;
+      widget.style.top = `${e.clientY - offsetY}px`;
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    header.style.cursor = 'grab';
+  });
+
+  // Minimize functionality
+  minimizeBtn.addEventListener('click', () => {
+    if (body.classList.contains('hidden')) {
+      body.classList.remove('hidden');
+      minimizeBtn.textContent = '-';
+    } else {
+      body.classList.add('hidden');
+      minimizeBtn.textContent = '+';
+    }
+  });
+
+  // Close functionality
+  closeBtn.addEventListener('click', () => {
+    widget.style.display = 'none';
+  });
 </script>
 <div id="sys_background"><header>
 <table style="width: 80%; margin-left: auto; margin-right: auto;">
