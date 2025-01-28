@@ -66,13 +66,79 @@
   </head>
   <body bgcolor="#D3D3D3">
 <div id="floating-widget">
-<div id="widget-header">Chat Widget
-<div class="actions"><button id="minimize">-</button> <button id="close">x</button></div>
+  <div id="widget-header">
+    Chat Widget
+    <div class="actions">
+      <button id="minimize">-</button>
+      <button id="close">x</button>
+    </div>
+  </div>
+  <div id="widget-body">
+    <!-- PLACE YOUR CHAT SCRIPT HERE -->
+<!-- Brevo Conversations {literal} -->
+<script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '678e69b216ee280f7a013c52';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+</script>
+<!-- /Brevo Conversations {/literal} -->
+    <p>Chat with us live or leave a message</p>
+  </div>
 </div>
-<div id="widget-body"><!-- Brevo Conversations {literal} --> <!-- /Brevo Conversations {/literal} -->
-<p>Chat with us live</p>
-</div>
-</div>
+
+<script>
+  const widget = document.getElementById('floating-widget');
+  const header = document.getElementById('widget-header');
+  const body = document.getElementById('widget-body');
+  const minimizeBtn = document.getElementById('minimize');
+  const closeBtn = document.getElementById('close');
+
+  // Dragging functionality
+  let offsetX = 0, offsetY = 0, isDragging = false;
+
+  header.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - widget.offsetLeft;
+    offsetY = e.clientY - widget.offsetTop;
+    header.style.cursor = 'grabbing';
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      widget.style.left = `${e.clientX - offsetX}px`;
+      widget.style.top = `${e.clientY - offsetY}px`;
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    header.style.cursor = 'grab';
+  });
+
+  // Minimize functionality
+  minimizeBtn.addEventListener('click', () => {
+    if (body.classList.contains('hidden')) {
+      body.classList.remove('hidden');
+      minimizeBtn.textContent = '-';
+    } else {
+      body.classList.add('hidden');
+      minimizeBtn.textContent = '+';
+    }
+  });
+
+  // Close functionality
+  closeBtn.addEventListener('click', () => {
+    widget.style.display = 'none';
+  });
+</script>
+
 <div id="sys_background">
 <table style="width: 80%; margin-left: auto; margin-right: auto;">
 <tbody>
