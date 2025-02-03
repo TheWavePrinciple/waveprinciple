@@ -10,7 +10,66 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <title>Sutherland Wave Institute Master the Market Waves with Sutherland Wave Principle</title>
         <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld8Kr8qAAAAAHLxbhwYGWPlcHNLV32a3JihVuCj"></script>
-     </head>
+    <!--CHAT BOX--!>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Chat Widget</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #floating-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background-color: #f4f4f4;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      cursor: grab;
+      overflow: hidden;
+    }
+
+    #widget-header {
+      background-color: #0078d7;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: grab;
+    }
+
+    #widget-header .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    #widget-header button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #widget-body {
+      padding: 10px;
+      height: calc(100% - 50px);
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+         </head>
   <body bgcolor="#D3D3D3">
 <!--CHAT WINDOW CODE!-->
 <div id="floating-widget">
