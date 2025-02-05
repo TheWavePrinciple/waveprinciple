@@ -37,6 +37,23 @@
                 font-size: 6vw; /* Scales heading size dynamically on small screens */
             }
         }
+   /* H1 Fix */
+h1 {
+    font-size: 3rem; /* Default for desktops */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Bigger on mobile but not tiny */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem; /* Further adjustment for very small screens */
+    }
+}
+
     </style>
 
 <meta property="og:image" content="https://github.com/TheWavePrinciple/waveprinciple/blob/main/Sutherland_Wave_Principle-img1.jpg?raw=true">
