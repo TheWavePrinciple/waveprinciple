@@ -1,0 +1,310 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=100%">
+   <style>
+    /* Ensures full width and height for the page */
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Ensures text is readable on all screen sizes */
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 18px; /* Default for desktops */
+        line-height: 1.5;
+    }
+
+    /* Makes text more readable on mobile devices */
+    @media (max-width: 768px) { 
+        body {
+            font-size: 1.3rem; /* Adjusts text size for smaller screens */
+        }
+    }
+
+    /* Example of making h1 headings scale with screen size */
+    h1 {
+        font-size: 2px; /* Default size */
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 6vw; /* Scales heading size dynamically on small screens */
+        }
+    }
+
+    /* H1 Fix - Prevent shrinking too much */
+    h1 {
+        font-size: clamp(20px, 5vw, 50px); /* Ensures it's never too small or too big */
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    /* H2 Styles - Paragraph Text */
+    h2 {
+        font-size: clamp(16px, 4vw, 32px); /* Scales but stays readable */
+        font-weight: normal;
+        line-height: 1.8;
+        margin-bottom: 125px;
+    }
+
+    /* H3 Styles - Paragraph Text */
+    h3 {
+        font-size: clamp(14px, 3vw, 28px); /* Scales but stays readable */
+        font-weight: normal;
+        line-height: 1.9;
+        margin-bottom: 8px;
+    }
+
+</style>
+
+<meta property="og:image" content="https://github.com/TheWavePrinciple/waveprinciple/blob/main/Sutherland_Wave_Principle-img1.jpg?raw=true">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:description" content="The Seventh Wave Principle is a set of empirically derived rules for interpreting patterns in the financial markets. It's a rational system of re-occurring patterns and descriptions of their structures. The Seventh Wave Principle is a guide to how these structures link together to form the same patterns of the next larger scale and so on.">
+<meta property="og:title" content="Sutherland Wave Institute Master the Market Waves with Sutherland Wave Principle">
+<meta name="description" content="Sutherland Wave Principle is a set of empirically derived rules for interpreting patterns in the financial markets.  It&#039;s a rational system of re occurring patterns and descriptions of their structures. Seventh Wave Principle is a guide to how these structures link together to form the same patterns of the next larger scale and so on. This is the ultimate cutting edge catalogue of price patterns." />
+<meta name="keywords" content="Sutherland Wave Institute, Master the Market Waves, 7th wave principle, Sutherland wave principle, SCIENCE OF TRADING, forex, Elliott wave principle, wave principle, Fibonacci retrace, 61.8" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <title>Sutherland Wave Institute Master the Market Waves with Sutherland Wave Principle</title>
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld8Kr8qAAAAAHLxbhwYGWPlcHNLV32a3JihVuCj"></script>
+    <!--CHAT BOX--!>
+  <meta charset="UTF-8">
+  
+  <title>Floating Chat Widget</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #floating-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background-color: #f4f4f4;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      cursor: grab;
+      overflow: hidden;
+    }
+
+    #widget-header {
+      background-color: #0078d7;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: grab;
+    }
+
+    #widget-header .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    #widget-header button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #widget-body {
+      padding: 10px;
+      height: calc(100% - 50px);
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+         </head>
+  <body bgcolor="#1e2124">
+<!--CHAT WINDOW CODE!-->
+<div id="floating-widget">
+  <div id="widget-header">
+    Chat Widget
+    <div class="actions">
+      <button id="minimize">-</button>
+      <button id="close">x</button>
+    </div>
+  </div>
+  <div id="widget-body">
+    <!-- PLACE YOUR CHAT SCRIPT HERE -->
+<!-- Brevo Conversations {literal} -->
+<script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '678e69b216ee280f7a013c52';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+</script>
+<!-- /Brevo Conversations {/literal} -->
+    <p>Chat with us live or leave a message</p>
+  </div>
+</div>
+
+<script>
+  const widget = document.getElementById('floating-widget');
+  const header = document.getElementById('widget-header');
+  const body = document.getElementById('widget-body');
+  const minimizeBtn = document.getElementById('minimize');
+  const closeBtn = document.getElementById('close');
+
+  // Dragging functionality
+  let offsetX = 0, offsetY = 0, isDragging = false;
+
+  header.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - widget.offsetLeft;
+    offsetY = e.clientY - widget.offsetTop;
+    header.style.cursor = 'grabbing';
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      widget.style.left = `${e.clientX - offsetX}px`;
+      widget.style.top = `${e.clientY - offsetY}px`;
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    header.style.cursor = 'grab';
+  });
+
+  // Minimize functionality
+  minimizeBtn.addEventListener('click', () => {
+    if (body.classList.contains('hidden')) {
+      body.classList.remove('hidden');
+      minimizeBtn.textContent = '-';
+    } else {
+      body.classList.add('hidden');
+      minimizeBtn.textContent = '+';
+    }
+  });
+
+  // Close functionality
+  closeBtn.addEventListener('click', () => {
+    widget.style.display = 'none';
+  });
+</script>
+<!--EDIT FROM HERE--!>
+<table style="width: 96.5533%; background-color: #000000; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr style="height: 12px;">
+<th style="width: 100%; height: 12px;">&gt;<a href="https://www.waveprinciple.org/"> <img style="width: 100%;" src="https://github.com/TheWavePrinciple/waveprinciple/blob/main/page_Images/Sutherland_Wave_Banner.jpg?raw=true" alt="The Seventh Wave Principle, 7th wave principle, Sutherland wave principle, SCIENCE OF TRADING, forex, Elliott wave principle, wave principle, Fibonacci retrace, 61.8" /></a>
+<div class="content">
+<blockquote>
+<h3><strong><span style="color: #ffffff;"><a style="color: #ffffff;" title="Home Page" href="/Index,htm">Home</a> <span style="color: #3366ff;">|&nbsp;</span></span><span style="color: #ffffff;"><a style="color: #ffffff;" title="Order Now" href="https://www.lulu.com/shop/renee-hoadley-and-paul-sutherland/sutherland-quantum-wave-principle/hardcover/product-k4gvjk.html?page=1&amp;pageSize=4" target="_blank" rel="noopener noreferrer">Get the Book</a>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;<a style="color: #ffffff;" title="Github Page" href="https://github.com/TheWavePrinciple" target="_blank" rel="noopener noreferrer">Github Link</a>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;<a style="color: #ffffff;" href="http://www.forexfactory.com/suthmo" target="_blank" rel="noopener noreferrer">Suthmo's History</a>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;<a style="color: #ffffff;" href="https://www.forexfactory.com/thread/post/6744519#post6744519" target="_blank" rel="noopener noreferrer">Achivements</a>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;<a style="color: #ffffff;" title="Sutherland Wave Principle on Youtube" href="https://www.youtube.com/watch?v=UyJ11a5Od6U" target="_blank" rel="noopener noreferrer">Intro to Wave Principle</a>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;<a style="color: #ffffff;" title="Forecast Video 1" href="https://www.youtube.com/watch?v=q8atD7y8WO8" target="_blank" rel="noopener noreferrer">Suthmo First Video Forecast</a>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;<a style="color: #ffffff;" title="Trading Carries a High Risk of Loss" href="https://theseventhwaveinstitute.yolasite.com/Risk-Disclaimer.php" target="_blank" rel="noopener noreferrer">Risk Disclaimer</a>&nbsp;</span></strong><span style="color: #ffffff;"><strong><span style="color: #3366ff;">| </span><span style="color: #3366ff;"><span style="color: #ffffff;"><a style="color: #ffffff;" title="History of SWP" href="/About.htm">About Us</a></span></span><span style="color: #3366ff;"><span style="color: #ffffff;">&nbsp;</span></span></strong></span></h3>
+<h1>&nbsp;<span style="color: #3366ff;"><strong>The Entire Core of the Wave Principle Has Been Transformed To&nbsp;a 7x7 System</strong></span></h1>
+<h2><span style="color: #ffffff;">&nbsp;*&nbsp;<strong>Now We Can Link Every Wave Together in Sequence</strong></span></h2>
+</blockquote>
+<h1><span style="color: #ffff00;"><a style="color: #ffff00;" href="https://www.lulu.com/shop/renee-hoadley-and-paul-sutherland/sutherland-quantum-wave-principle/hardcover/product-k4gvjk.html?page=1&amp;pageSize=4" target="_blank">&gt;&gt;&nbsp;Get the Book&nbsp;&lt;&lt;<br /><br /></a></span></h1>
+<p><img src="https://github.com/TheWavePrinciple/waveprinciple/blob/main/Book/Book_Cover4.jpg?raw=true" alt="" width="199" height="220" /></p>
+<blockquote>
+<h2 style="text-align: justify;"><span style="color: #ffffff;">I'm Paul Sutherland, I became the top 1% most watched trader at the world&rsquo;s biggest trade forum while developing the Seventh Wave Principle. I realized how to catch every swing in the markets, finding every movement every hour every day for months at a time. This shocked the online trading community and earned me cult status as a master trader.</span></h2>
+<h2 style="text-align: justify;"><span style="color: #ffffff;">I broke all the rules of what people thought possible in forecasting and documented it all at the forum for&nbsp;15&nbsp;years. I've been studying charts for 30 years. For the past 18 years, I've been isolating wave groups, plotting sequences and realized I had discovered my own version of 'The Wave Principle,' from the ground up, and now I'm proud to present it to you.</span></h2>
+<h2 style="text-align: justify;"><span style="color: #ffffff;">I'm going to teach you my cutting edge techniques and give you the benefit of&nbsp;30 years of research and the revelations. I hope you'll love the Seventh Wave Principle as much as I do. I hope you add these invaluable lessons to your trading arsenal.</span></h2>
+<h2 style="text-align: justify;"><span style="color: #ffffff;"><strong>The Seventh Wave Principle will provide you with many profitable opportunities for the future.&nbsp;<br /><br /></strong></span></h2>
+</blockquote>
+<h2><span style="color: #ffffff;"><strong>Paul Sutherland</strong></span><br /><br /><span style="color: #ffffff;"><strong>(Suthmo)<br /><br /></strong></span></h2>
+<h2><span style="color: #3366ff;">The New Laws of Motion and Energy</span></h2>
+<h2><span style="color: #3366ff;">Teslas's Key to The Universe</span></h2>
+<div class="content">
+<div class="content">
+<h3><img src="https://github.com/TheWavePrinciple/waveprinciple/blob/main/SutherlandWavePrincipleNowEvenQuantumyer.png?raw=true" alt="" width="700" height="892" /></h3>
+<blockquote>
+<h3><span style="color: #3366ff;">&nbsp;</span></h3>
+<h1><span style="color: #3366ff;">Tesla's (Rhodin's) Vortex Math in the context of the 7th Wave Principle.</span></h1>
+<h3><img src="https://github.com/TheWavePrinciple/waveprinciple/blob/main/Platonic%20Taurus6.png?raw=true" alt="Platonic Taurus Flower Of Life Sutherland Wave Principle" width="100%" height="100%" /></h3>
+<h3><img src="https://github.com/TheWavePrinciple/waveprinciple/blob/main/Platonic%20Taurus5v2.png?raw=true" alt="" width="100%" height="100%" /></h3>
+</blockquote>
+<h3><span style="color: #ffffff;">&nbsp;</span></h3>
+<blockquote>
+<h2 style="text-align: justify;"><span style="color: #ffffff;">This is the next great leap in understanding that takes us beyond Newton and Einstein.&nbsp;Sutherland Wave Principal. The Sutherland Wave Principle is a complete conversion of R.N. Elliott&rsquo;s Laws of Nature.</span></h2>
+</blockquote>
+<h1><span style="color: #3366ff;"><strong><br />NEW SCIENCE</strong></span></h1>
+<blockquote>
+<h2 style="text-align: justify;"><span style="color: #ffffff;"><strong>So we spun waves around till we plotted the sequence of their contstruction.&nbsp;</strong></span><span style="color: #ffffff;">This study reveals new information on the structure of space time, Thoth&rsquo;s 7 Cycles, Tesla&rsquo;s 3, 6, 9 code, and Fibonacci's sequence.</span></h2>
+<h2 style="text-align: justify;"><span style="color: #ffffff;">Sutherland Wave Institute is home of The Only Accurate 7:7 Ratio Market Price Pattern Catalogue! We&rsquo;ve discovered how Platonic Solid shapes are formed within waves relative to wave numbers.</span></h2>
+<h2 style="text-align: justify;"><span style="color: #ffffff;">The World's First 7:7 Ratio Wave Principle Pattern Catalogue &amp; Market Price Pattern Catalogue</span></h2>
+<h2 style="text-align: justify;"><span style="color: #ffffff;"><strong>This study greatly expands Elliott's first vision of the wave principle by revealing how the wave principle ties into Tesla and Fibonacci codes.</strong></span></h2>
+<h2 style="text-align: justify;"><span style="color: #ffffff;">This study unifies the works of Elliott, Fibonacci, Tesla, Sutherland, Haramein, Winters, Hoadley, Jain108&hellip;, to reveal the relationship between the story of creation, the wave principle and quantum physics.</span></h2>
+<h2 style="text-align: justify;"><span style="color: #ffffff;"><strong>This study was produced from&nbsp;three decades of live charting, 14 years live in public at Forex Factory suthmo account. The Sutherland Wave Principle was produced&nbsp;with help from the Elliott Wave Principle and Article 65 at Cosmic-Core&rsquo;s Free Library.</strong></span></h2>
+<p style="text-align: justify;"><span style="color: #ffffff;"><strong>&nbsp;</strong></span></p>
+<h1 style="text-align: justify;"><span style="color: #3366ff;"><strong>Map of Quantum Entanglements Spooky Action At a Distance</strong></span></h1>
+<h2 style="text-align: justify;"><span style="color: #ffffff;">There is a symmetry in creation, the circuits of existence are interacting with their selves in the future on the other side of reality upside down and back to front is the connected circuit that relates to the current circuit across the all thing. We have mapped the connections they're right here illustrated as the Primary Sequence. The entangled pairs would be the parallel circuits that share a relationship based on the primary sequence.</span></h2>
+</blockquote>
+<h2><span style="color: #ffffff;">&nbsp;</span></h2>
+<h1><span style="color: #ffffff; background-color: #3366ff;"><strong>7 Dimensions</strong></span></h1>
+</div>
+<blockquote>
+<h2 class="content" style="text-align: justify;"><span style="color: #ffffff;">So far as I understand it a Dimension is a fundamental element of existence. There's Length, Width, Height, Bredth, Time/Age, Visibility &amp; Sound. When I hear people say they want to travel to another dimension, I'm imagining them travelling from height to time, or from breadth to vibration. Time to re think this travelling to other dimensions thingy.</span></h2>
+</blockquote>
+<h2 class="content"><span style="color: #ffffff;">&nbsp;</span></h2>
+<blockquote>
+<h1><span style="color: #3366ff;"><strong>Earthquake Detection Magnitude Calculator</strong></span></h1>
+<h2 style="text-align: justify;"><span style="color: #ffffff;"><strong>I need to make earthquake waves look like stock market charts then we can calculate every important aspect of timing and magnitude. There's no need to be in the dark, the pre tremors will give clear signals relative to the wave principle.<br /><br /></strong></span></h2>
+<h1><span style="color: #ffff00;">Watch the Video</span></h1>
+<h1 class="style-scope ytd-watch-metadata"><span style="color: #3366ff;"><strong>Sutherland Wave Principle Lesson 1 Introduction to Quantum Physics</strong></span></h1>
+<h3><iframe src="//www.youtube.com/embed/UyJ11a5Od6U" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></h3>
+<h3><span class="style-scope yt-formatted-string bold" dir="auto" style="color: #ffffff;"><strong>Oct 5, 2021</strong></span></h3>
+<h3>&nbsp;</h3>
+<h2 style="text-align: justify;"><span class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap yt-core-attributed-string--link-inherit-color" dir="auto"><span style="color: #ffffff;">Update: Coaxial Circuit Principle Palindrome coaxial circuits of space and time weaving, subdividing and unifying past present and future through 9 time frames. 3 sets of 7 circuits complete the "...lords of cycles..." "9 above&nbsp;14&nbsp;below." Each set of 7 is divided into 3 degrees. A matrix of light consciousness dancing across the flower of life condensing into lower grosser forms of matter. Governed by the Fibonacci sequence, the matrix flows through an infinitely repeating palindrome toroidal sequence of-overlapped interlocked series of sevens from which the-platonic solid shapes emerge from the arrangement of sub circuits, relative to the Fibonacci sequence. I know how and why Platonic solids emerge from pure energy now. The &lsquo;Sutherland Wave Principle&rsquo; or the &lsquo;Seventh Wave Principle&rsquo; is a blueprint of a fixed set of laws that comprises the coaxial circuits that time and space are contained by. The Seventh Wave Principle defines a natural field, a container of energy, like a cup or a grail container of light source. This arrangement of time/energy circuits produces the vedic staircase from which all number systems emerge. This arrangement produces the tetrahedron. All known harmonics are relative to a central line of the tetrahedron. The all emerges from these arrangements, emerging from the 7 circle flower of life creation pattern producing the circuits of space/time. Sutherland Wave Principle Lesson 1:... Platonic Solids. This lesson explains how the flower of life's ratcheting vortex motion arrangement of spheres produces all the Platonic solid shapes. The article goes on to discuss the various properties of each circle added to the flower of life to form a Vesica Pisces. We learn how the flower of life's story is also the story of human reproduction with egg formation. This story explains how each circle added to the flower of life produces successive Platonic solid shapes as they progress. We learn how seven represents a return to source. I explain how I've realized how waves grow in octaves as they go up and down in scale. Concepts of a waveform universe explains how the flower of life creates all the geometry we see in 3D. The Seventh Wave Principle, Wave Principle and Quantum Physics update is AVAILABLE NOW IN HARD BACK BOOK at lulu book store.</span><br /><br /></span></h2>
+<h2 style="text-align: center;"><span style="color: #ffff00;"><span class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap yt-core-attributed-string--link-inherit-color" dir="auto">Unlock the Complete Map of Market Cycles&mdash;&nbsp;</span><a style="color: #ffff00;" href="https://www.lulu.com/shop/renee-hoadley-and-paul-sutherland/sutherland-quantum-wave-principle/hardcover/product-k4gvjk.html?page=1&amp;pageSize=4" target="_blank" rel="noopener noreferrer"><span class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap yt-core-attributed-string--link-inherit-color" dir="auto"><strong>Order Your Copy Today!</strong></span></a></span></h2>
+<h3>&nbsp;</h3>
+<h3><iframe src="//www.youtube.com/embed/OeVrtyXN8hc" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></h3>
+<h3 id="info-container" class="style-scope ytd-watch-info-text"><span class="style-scope yt-formatted-string bold" dir="auto" style="color: #ffffff;"><strong>Oct 4, 2021</strong></span></h3>
+<h2 style="text-align: justify;"><span class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap yt-core-attributed-string--link-inherit-color" dir="auto" style="color: #ffffff;">This series of lessons is read from the new book Sutherland Wave Principle. The video includes Lesson 1:... Introduction to Quantum Physics. This lesson chronicles my journey to discovery of how quantum physics relates to wave principle and how the two subjects have become one. This video describes how I became frustrated in my search and through observing a Nassim Haramein post about the flower of life geometry led me to research and discover and learn deeply about quantum physics by finding the website cosmic-core.org by Author Renee Hoadley. The lesson goes onto discuss my efforts to model time leading to my discovery that Tesla's 3, 6, 9 code is embedded in waves in space and time. This is where the world of sacred geometry and sacred numbers opened up to me and collided with my own work. Reading from cosmic-core.org I learned of the flower of life pattern geometry underpins all reality. This lesson explains how the seven circles of the Seed of Life genesis pattern is a web that underlies all reality first mentioned in the Emerald Tablets of Toth. The flower of life though ratcheting vortex motion produces all the platonic solid shapes.</span></h2>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<h1 class="style-scope ytd-watch-metadata"><span style="color: #3366ff;"><a style="color: #3366ff;" title="Click for Introduction to Wave Principle" href="https://www.youtube.com/watch?v=55OgiB_ZNJc" target="_blank" rel="noopener noreferrer">Sutherland Wave Principle Lesson 1: An introduction to the Wave Principle</a></span></h1>
+<h3>&nbsp;</h3>
+<h3 id="info-container" class="style-scope ytd-watch-info-text"><span style="color: #ffffff;"><strong>Oct 4, 2021</strong></span></h3>
+<h2 style="text-align: justify;"><span class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap yt-core-attributed-string--link-inherit-color" dir="auto" style="color: #ffffff;">Lesson 1: An introduction to the Wave Principle. This lesson briefly describes how the Wave Principle was first discovered by Ralph Nelson Elliott in 1938 but in 2018 was re realized, transformed from 5 to a 7 wave system and merged with quantum physics in 2021. The wave principle has been re-realized independently. The entire market cycle has been de-coded piece by piece over a decade of research, observation and isolation. What emerged seems to be an infinitely repeating, overlapped, interlocking series of sevens. The &lsquo;Sutherland Wave Principle&rsquo; or the &lsquo;Seventh Wave Principle&rsquo; is a blueprint of a fixed set of laws that comprises the field that waves are contained by. The Seventh Wave Principle defines a natural field, a container of energy, like a cup or a grail. R.N Elliott and I both agree that, contrary to popular belief, the news is ancillary to the Wave Principle, I.e. nothing outside seems to be affecting day-to-day prices. Elliott states the market has a law of its own, not propelled by linear forces. Elliott believed that the market was ruled by advancing waves of five corrected by a retracement of three waves, the 5:3 pattern relationships. I'm going to demonstrate how every single wave is made of seven subdivisions and is in fact ruled by an infinitely repeating 7 x 7 relationship. Elliott states categorically that the market is not a cyclic rhythmic machine, but its movement represents structured formal progression.</span></h2>
+<h2 style="text-align: justify;"><span style="color: #ffffff;"><strong><br /><br /></strong></span></h2>
+</blockquote>
+</div>
+<blockquote>
+<h1 style="text-align: justify;"><span style="color: #ff0000;"><span style="color: #3366ff;">TAKE THIS ADVANTAGE NOW!! GET AHEAD OF THE COMPETITION&nbsp; WITH SUTHERLAND WAVE PRINCIPLE.</span> DON'T WAIT FOR THE NEXT GUY TO GAIN THE ADVANTAGE!!&nbsp;GET YOUR COPY OF&nbsp;THE&nbsp; MOST&nbsp;UP TO DATE GUIDE TO TRADING&nbsp;TODAY.</span> <span style="background-color: #000080; color: #ffffff;">THIS IS THE WORLDS #1 LESSON AND GUIDE TO MARKETS PERIOD!!!</span></h1>
+</blockquote>
+</div>
+<div class="content">
+<h1 style="text-align: justify;">&nbsp;</h1>
+<h1><span style="color: #ffff00;">&gt;&gt;!!</span><a href="https://www.lulu.com/shop/renee-hoadley-and-paul-sutherland/sutherland-quantum-wave-principle/hardcover/product-k4gvjk.html?page=1&amp;pageSize=4" target="_blank"><span style="color: #ffff00;">Click Here to Order the Full Guide!!&lt;&lt;</span><br /></a></h1>
+<blockquote>
+<h2 class="content">&nbsp;&nbsp;<img src="https://github.com/TheWavePrinciple/waveprinciple/blob/main/page_Images/The_Sutherland_Wave_Principle33.jpg?raw=true" alt="TAKE THIS ADVANTAGE NOW GET AHEAD OF THE COMPETITION WITH SUTHERLAND WAVE PRINCIPLE. DON'T WAIT FOR THE NEXT GUY TO GAIN THE ADVANTAGE!! GET YOUR COPY OF THE MOST UP TO DATE GUIDE TO TRADING TODAY. THIS IS THE WORLDS #1 LESSON AND GUIDE TO MARKETS PERIOD" width="100%" height="100%" /></h2>
+</blockquote>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+<div class="content">&nbsp;</div>
+<div class="footer">
+<h3 style="text-align: center;"><span style="color: #ffffff;">&nbsp;<a style="color: #ffffff;" href="#">Top</a> | <a style="color: #ffffff;" title="Home Page" href="/index.htm">Hom&nbsp;&nbsp;</a><span style="color: #3366ff;">|&nbsp;</span></span><span style="color: #ffffff;"><a style="color: #ffffff;" title="Order Now" href="https://www.lulu.com/shop/renee-hoadley-and-paul-sutherland/sutherland-quantum-wave-principle/hardcover/product-k4gvjk.html?page=1&amp;pageSize=4" target="_blank" rel="noopener noreferrer"><strong>Get the Book</strong></a>&nbsp;<span style="color: #3366ff;">|</span><strong>&nbsp;</strong><a style="color: #ffffff;" title="Github Page" href="https://github.com/TheWavePrinciple" target="_blank" rel="noopener noreferrer"><strong>Github Link</strong></a><strong>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;</strong><a style="color: #ffffff;" href="http://www.forexfactory.com/suthmo" target="_blank" rel="noopener noreferrer"><strong>Suthmo's History</strong></a><strong>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;</strong><a style="color: #ffffff;" href="https://www.forexfactory.com/thread/post/6744519#post6744519" target="_blank" rel="noopener noreferrer"><strong>Achivements</strong></a><strong>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;</strong><a style="color: #ffffff;" title="Sutherland Wave Principle on Youtube" href="https://www.youtube.com/watch?v=UyJ11a5Od6U" target="_blank" rel="noopener noreferrer"><strong>Intro to Wave Principle</strong></a><strong>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;</strong><a style="color: #ffffff;" title="Forecast Video 1" href="https://www.youtube.com/watch?v=q8atD7y8WO8" target="_blank" rel="noopener noreferrer"><strong>Suthmo First Video Forecast</strong></a><strong>&nbsp;<span style="color: #3366ff;">|</span>&nbsp;</strong><a style="color: #ffffff;" title="Trading Carries a High Risk of Loss" href="https://theseventhwaveinstitute.yolasite.com/Risk-Disclaimer.php" target="_blank" rel="noopener noreferrer"><strong>Risk Disclaimer</strong></a></span><span style="color: #ffffff;"><strong><span style="color: #3366ff;">|&nbsp;<a style="color: #ffffff;" title="History of SWP" href="/About.htm">About Us</a></span></strong></span></h3>
+<blockquote>
+<h1 style="text-align: justify;"><span style="color: #0000ff;">&nbsp;<br /><span style="color: #3366ff;"><strong><span style="color: #ffffff; background-color: #3366ff;">Master the Markets:</span> Unlock the Hidden Order of Reality &amp; The Patterns of Financial Market Waves</strong></span></span></h1>
+</blockquote>
+<p style="text-align: center;"><strong>&copy; 2025 Seventh Wave Institute, Peterborough, Cambridgeshire, England</strong></p>
+</div> </body> 
+</html>
