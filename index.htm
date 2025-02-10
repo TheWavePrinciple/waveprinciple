@@ -169,6 +169,10 @@
   const minimizeBtn = document.getElementById('minimize');
   const closeBtn = document.getElementById('close');
 
+  // Start Minimized
+  body.classList.add('hidden');
+  minimizeBtn.textContent = '+';
+
   // Dragging functionality
   let offsetX = 0, offsetY = 0, isDragging = false;
 
